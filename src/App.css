@@ -3,35 +3,164 @@
   --main-white: #EDE9E0;
 }
 
+a { color: inherit; text-decoration: none;} 
+
+i {font-style: normal;}
+
 html{
   background: var(--main-black);
   color: var(--main-white);
 }
 
-h1{
-  font-size: 4rem;
-  margin: 0;
+p{
+  font-weight: 500;
 }
 
-h2{
-  font-size: 2.5rem;
-}
 
-.App{
-  margin: 5%;
-}
+/* Small screens - MOBILE */
+@media only screen { } /* Define mobile styles - Mobile First */
+ 
+@media only screen and (max-width: 40em) { } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+ 
+/* Medium screens - TABLET */
+@media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */
+ 
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+ 
+/* Large screens - DESKTOP */
+@media only screen and (min-width: 64.063em) {
 
-.NavBar{
-  border-radius: 20px;
-  height: 50px;
-  width: 80%;
-  background: var(--main-white);
-  color: var(--main-black);
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
+  h1{
+    font-size: 6rem;
+    margin: 0;
+    font-weight: 900;
+    line-height: 5rem;
+  }
+  
+  h1:nth-of-type(2n){
+    margin-left: 5.5rem;
+  }
 
-.NavBar > h3 {
-  font-size: 1.4rem;
-}
+  
+  h2{
+    font-size: 3.2rem;
+  }
+
+  h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  p{
+    font-size: 1.5rem;
+  }
+
+  .mainTitle{
+    margin-bottom: 3rem;
+  }
+
+  .homeSec{
+    margin: 1rem 3.5rem;
+  }
+  
+  .NavBar{
+    border-radius: 20px;
+    height: 50px;
+    width: 60%;
+    background: var(--main-white);
+    color: var(--main-black);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .navtip{
+    position: absolute;
+    z-index: -1;
+    margin-left: -15rem;
+    margin-top: -6px;
+    height: 64px;
+
+  }
+
+  .twist{
+    position: absolute;
+    width: 5.2rem;
+    margin-top: -1.2rem;
+    margin-left: -1.2rem;
+    opacity: 25%;
+  }
+
+  .twistDefault{
+    position: absolute;
+    width: 5.5rem;
+    margin-top: -1rem;
+    margin-left: 1.2rem;
+    opacity: 25%;
+  }
+
+
+  .defaultNav{
+    background: var(--main-white);
+    color: var(--main-black);
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 3.5rem;
+  }
+
+  .defaultNav h1{
+    margin-right: auto;
+    font-size: 4rem;
+  }
+
+  .defaultNav h3{
+    margin: 1rem 2rem;
+  }
+
+  .navitem{
+    opacity: 100%;
+    transition: all .15s ease-out;
+    cursor: pointer;
+  }
+  
+  .navitem:hover{
+   opacity: 40%;
+   transition: all .1s;
+  }
+
+  .currentLink{
+    cursor: default;
+    opacity: 25%;
+  }
+  
+  #about{
+    margin-top: 5rem;
+    height: 90vh;
+  }
+
+  .about-container{
+    margin-left: auto;
+    margin-top: 8rem;
+    width: 30%;
+    text-align: right;
+  }
+
+  #recentwork{
+    height: 100vh;
+  }
+
+
+} /* min-width 1025px, large screens */
+ 
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
+ 
+/* XLarge screens */
+@media only screen and (min-width: 90.063em) { } /* min-width 1441px, xlarge screens */
+ 
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+ 
+/* XXLarge screens */
+@media only screen and (min-width: 120.063em) { } /* min-width 1921px, xlarge screens */
