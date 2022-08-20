@@ -24,7 +24,7 @@ const Webpages = () => {
                 <Route exact path="/blog" element={Blog()} />
                 <Route exact path="/contact" element={Contact()} />
                 <Route exact path="/store" element={Store()} />
-                <Route exact path="*" element={NotFound()} />
+                <Route exact path="*" element={NotFound()} /> //? Handles 404 page targeting all non-specified routes
             </Routes>
         </Router>
     );
