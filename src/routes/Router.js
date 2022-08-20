@@ -5,6 +5,8 @@ import {
     Route
 } from "react-router-dom";
 
+import NotFound from './Misc/NotFound'; //? 404 Page
+
 import Home from './Home';
 import Comics from './Comics';
 import Portfolio from './Portfolio';
@@ -22,6 +24,7 @@ const Webpages = () => {
                 <Route exact path="/blog" element={Blog()} />
                 <Route exact path="/contact" element={Contact()} />
                 <Route exact path="/store" element={Store()} />
+                <Route exact path="*" element={NotFound()} />
             </Routes>
         </Router>
     );

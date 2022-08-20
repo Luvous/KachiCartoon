@@ -86,7 +86,7 @@ p{
   .twist{
     position: absolute;
     width: 5.2rem;
-    margin-top: -1.2rem;
+    margin-top: -2.2rem;
     margin-left: -1.2rem;
     opacity: 25%;
   }
@@ -94,7 +94,7 @@ p{
   .twistDefault{
     position: absolute;
     width: 5.5rem;
-    margin-top: -1rem;
+    margin-top: -2rem;
     margin-left: 1.2rem;
     opacity: 25%;
   }
@@ -126,7 +126,7 @@ p{
     cursor: pointer;
   }
 
-  .navitem h3:last-child{
+  .cont h3{
     margin-right: 0;
   }
   
@@ -227,6 +227,33 @@ p{
     object-fit: cover;
     height: fill;
   }
+
+  /* Comics Section */
+
+  .comics-container{
+    display: flex;
+  }
+
+  /* NotFound */
+
+  .not-found-container{
+    margin: 2.5rem 3.5rem;
+    border-radius: 20px;
+    background: var(--main-white);
+    color: var(--main-black);
+    padding: 2rem;
+  }
+
+  .not-found-container h1{
+    font-size: 3.5rem;
+  }
+
+  .not-found-container h2{
+    font-size: 2rem;
+    font-weight: 600;
+    width: 55%;
+  }
+  
 
 } /* min-width 1025px, large screens */
  

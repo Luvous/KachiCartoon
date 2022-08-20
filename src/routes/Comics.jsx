@@ -3,9 +3,12 @@ import NavBar from '../components/NavBar'
 
 function Comics() {
     return (
-        <div>
+        <section>
             <NavBar currentPath="comics"/>
-        </div>
+            <div className='comics-container'>
+
+            </div>
+        </section>
     )
 }
 
