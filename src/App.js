@@ -1,11 +1,14 @@
 import './App.css';
 import Webpages from './routes/Router';
+import { MantineProvider } from '@mantine/core';
 
 function App() {
   return (
-    <div className="App">
-      <Webpages />
-    </div>
+    <MantineProvider>
+      <div className="App">
+        <Webpages />
+      </div>
+    </MantineProvider>
   );
 }
 
