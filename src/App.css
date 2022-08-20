@@ -197,8 +197,19 @@ p{
   .carouselContainer{
     top: 5rem;
     position: absolute;
-    width: 100%;
+    margin: 0 3.5rem;
     background: rgba(52, 49, 52, 0.90);
+
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
+  }
+
+  .carouselCross{
+    z-index: 50;
+    position: absolute;
+    right: .5rem;
+    cursor: pointer;
   }
 
   .carousel .slide img{
