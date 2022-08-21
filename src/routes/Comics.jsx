@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link, Outlet } from "react-router-dom";
 import NavBar from '../components/NavBar';
-
 
 function Comics() {
     const COMICS =
@@ -37,12 +37,13 @@ function Comics() {
             <NavBar currentPath="comics" />
             <div className='comics-container'>
                 {COMICS.map((i) => (
-                    <a href={'/'+i.title} className='covers-items' key={i.id}>
+                    <Link to={`/comics/${i.id}`} className='covers-items' key={i.id}>
                         <img src={i.src} />
                         <p>{i.title}</p>
-                    </a>
+                    </Link>
                 ))}
             </div>
+            <Outlet />
         </section>
     )
 }
