@@ -286,6 +286,12 @@ p{
     width: 55%;
   }
   
+  /* Contact Section */
+
+  .contact-container{
+    margin: 1rem 3.5rem;
+    display: flex;
+  }
 
 } /* min-width 1025px, large screens */
  
