@@ -16,18 +16,18 @@ import Contact from './Contact';
 import Store from './Store';
 
 const Webpages = () => {
+
     return (
         <Router>
             <Routes>
-                <Route exact path="/" element={Home()} />
-                <Route exact path="/comics" element={Comics()} >
-                    <Route path=":comicId" element={Comic()} />
-                </Route>
-                <Route exact path="/portfolio" element={Portfolio()} />
-                <Route exact path="/blog" element={Blog()} />
-                <Route exact path="/contact" element={Contact()} />
-                <Route exact path="/store" element={Store()} />
-                <Route exact path="*" element={NotFound()} /> //? Handles 404 page targeting all non-specified routes
+                <Route exact path="/" element={<Home />} />
+                <Route exact path="/comics" element={<Comics />} />
+                <Route path='/comics/:comicId' element={<Comic />} />
+                <Route exact path="/portfolio" element={<Portfolio />} />
+                <Route exact path="/blog" element={<Blog />} />
+                <Route exact path="/contact" element={<Contact />} />
+                <Route exact path="/store" element={<Store />} />
+                <Route path="*" element={<NotFound />} /> //? Handles 404 page targeting all non-specified routes
             </Routes>
         </Router>
     );
