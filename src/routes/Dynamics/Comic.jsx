@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { getComics } from '../../Data';
 import NotFound from '../Misc/NotFound';
 
-function Comic() {
+function IndividualComic() {
     let { comicId } = useParams();
     let parsedComic = getComics().find((i) => i.id == comicId);
 
@@ -21,4 +21,4 @@ function Comic() {
     )
 }
 
-export default Comic
+export default IndividualComic

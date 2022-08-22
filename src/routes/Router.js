@@ -9,7 +9,7 @@ import NotFound from './Misc/NotFound'; //? 404 Page
 
 import Home from './Home';
 import Comics from './Comics';
-import Comic from './Dynamics/Comic';
+import IndividualComic from './Dynamics/Comic';
 import Portfolio from './Portfolio';
 import Blog from './Blog';
 import Contact from './Contact';
@@ -22,7 +22,7 @@ const Webpages = () => {
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/comics" element={<Comics />} />
-                <Route path='/comics/:comicId' element={<Comic />} />
+                <Route path='/comics/:comicId' element={<IndividualComic />} />
                 <Route exact path="/portfolio" element={<Portfolio />} />
                 <Route exact path="/blog" element={<Blog />} />
                 <Route exact path="/contact" element={<Contact />} />
