@@ -30,7 +30,7 @@ function NotFound() {
                                     fontSize: '1.7rem',
                                     fontWeight: 800,
                                     '&:hover': {
-                                        backgroundColor: theme.fn.lighten('#343134', 0.05),
+                                        backgroundColor: theme.fn.lighten('#343134', 0.15),
                                     }
                                 }
                             })}
