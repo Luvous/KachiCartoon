@@ -8,15 +8,31 @@ function IndividualComic() {
     let { comicId } = useParams();
     let parsedComic = getComics().find((i) => i.id == comicId);
 
-    if (parsedComic == undefined){
+    if (parsedComic == undefined) {
         return <NotFound />
     }
+
     return (
         <div>
             <NavBar />
-            <p>Comic: {parsedComic.title}</p>
-            <p>Comic: {parsedComic.id}</p>
-            <img src={parsedComic.src} alt='' />
+            <h4 style={{
+                fontSize: '4rem',
+                textAlign: 'center',
+                fontWeight: 700,
+                marginTop: '2.5rem',
+                marginBottom: '.8rem'
+            }}>{parsedComic.title}</h4>
+            <p style={{
+                fontSize: '1.5rem',
+                textAlign: 'center',
+                margin: '2rem'
+            }}>Paginas: {parsedComic.pages.length}</p>
+            <div className='pages-container'>
+                {parsedComic.pages.map((page) => (
+                    <img className='comic-singlepage' src={page} />
+                ))}
+            </div>
+
         </div>
     )
 }

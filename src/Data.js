@@ -23,7 +23,18 @@ const comicsData = [
         id: 4978461,
         src: "https://nerdnightnews.com/wp-content/uploads/2022/05/Screenshot_20220520-093825_Gallery-672x1024.jpg",
         title: "Break/Out"
+    },
+    {
+        id: 9794556,
+        src: "https://2.bp.blogspot.com/2CJijySKsgH8ReMZbYmfsponK6zXOJKXvaj74-BgfK1uNrxnrES7qAx5ucPYmtku31-cbTXV1BQ5Uh9AOTZRGRRmDrG94LMEuu3Voufz_u8e_DWvWYCoKcR4dJpIRfqJwgihNgqrcw=s1600?rhlupa=MjAwMTo2N2M6MjYyODo2NDc6MTI6OmU=&rnvuka=TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzEwMy4wLjUwNjAuMTM0IFNhZmFyaS81MzcuMzYgT1BSLzg5LjAuNDQ0Ny4xMDE=",
+        title: "Tom & Jerry",
+        pages:[
+            'https://2.bp.blogspot.com/2CJijySKsgH8ReMZbYmfsponK6zXOJKXvaj74-BgfK1uNrxnrES7qAx5ucPYmtku31-cbTXV1BQ5Uh9AOTZRGRRmDrG94LMEuu3Voufz_u8e_DWvWYCoKcR4dJpIRfqJwgihNgqrcw=s1600?rhlupa=MjAwMTo2N2M6MjYyODo2NDc6MTI6OmU=&rnvuka=TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzEwMy4wLjUwNjAuMTM0IFNhZmFyaS81MzcuMzYgT1BSLzg5LjAuNDQ0Ny4xMDE=',
+            'https://2.bp.blogspot.com/BwIYqcpAT4TxNW8JW_NhM5yt6Ls1M7bqSZ34tqbwqM3HMB7icjw7DS4MRcTR3NQIORHdTLYK9M1YgzSuqJEwyzvo54BXnxAzAhjfnACSChoL2XGFAyy6OGep52-RSTHrrJ3URdqKZg=s1600?rhlupa=MjAwMTo2N2M6MjYyODo2NDc6MTI6OmU=&rnvuka=TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzEwMy4wLjUwNjAuMTM0IFNhZmFyaS81MzcuMzYgT1BSLzg5LjAuNDQ0Ny4xMDE=',
+            'https://2.bp.blogspot.com/Yptc7DbwYnp1OmStPDZ9n5k7r8D38r31g3MRy3n4UmqxApk15Afn4bRAU56WmSJUf6yCtHXwVnVTWuWrB2P6rjUl2X_BkNrr811goxgK47lVLVYh-sPNAofiiikes5LFld4CBuM-lA=s1600?rhlupa=MjAwMTo2N2M6MjYyODo2NDc6MTI6OmU=&rnvuka=TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzEwMy4wLjUwNjAuMTM0IFNhZmFyaS81MzcuMzYgT1BSLzg5LjAuNDQ0Ny4xMDE='
+        ]
     }
+
 ]
 
 export function getComics(){

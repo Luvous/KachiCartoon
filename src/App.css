@@ -10,10 +10,24 @@ i {font-style: normal;}
 html{
   background: var(--main-black);
   color: var(--main-white);
+  scroll-behavior: smooth;
 }
 
 p{
   font-weight: 500;
+}
+
+.pages-container{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.comic-singlepage{
+  width: 95vw;
+  flex: 1;
 }
 
 
@@ -339,6 +353,20 @@ p{
 
   .txrerw .mantine-1m3pqry{
     width: 100%;
+  }
+
+  /* Comics */
+
+  .pages-container{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 2.5rem;
+    justify-content: center;
+  }
+
+  .comic-singlepage{
+    width: 95%;
+    flex: 1;
   }
 
 } /* min-width 1025px, large screens */
