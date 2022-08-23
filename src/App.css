@@ -26,10 +26,27 @@ p{
 }
 
 .comic-singlepage{
-  width: 95vw;
+  width: 100%;
   flex: 1;
 }
 
+.mantine-u4eu9e{
+  background-color: var(--main-white);
+}
+
+.mantine-is8y6n {
+  opacity: 1!important;
+  background-color: var(--main-white)!important;
+}
+
+.mantine-i7tkg5{
+  opacity: 1!important;
+  background-color: var(--main-white)!important;
+}
+
+.mantine-xluadz{
+  background-color: var(--main-white)!important;
+}
 
 /* Small screens - MOBILE */
 @media only screen { } /* Define mobile styles - Mobile First */
