@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import NavBar from '../../components/NavBar';
 import { useParams } from 'react-router-dom';
 import { getComics } from '../../Data';
 import { MantineProvider } from '@mantine/core';
 import { NavigationProgress, setNavigationProgress } from '@mantine/nprogress';
+import Footer from '../../components/Footer';
 
 function IndividualComic() {
     let { comicId } = useParams();
@@ -48,8 +49,11 @@ function IndividualComic() {
                     <img className='comic-singlepage' src={page} />
                 ))}
             </div>
-
-        </div>
+            <br />
+            <br />
+            <br />
+            <Footer />
+        </div> 
     )
 }
 

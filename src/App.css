@@ -48,6 +48,40 @@ p{
   background-color: var(--main-white)!important;
 }
 
+.carousel .thumbs-wrapper ul {
+  height: 80px;
+}
+
+.carousel .thumbs-wrapper li {
+  border: 2px solid #EDE9E0;
+  border-radius: 12px;
+  transition: all .1s;
+}
+
+.carousel .thumb {
+  cursor: pointer;
+}
+
+.carousel .thumbs-wrapper img{
+  border-radius: 10px;
+}
+
+.footer p{
+  font-size: 1rem;
+  font-weight: 400;
+  margin: .5rem 0;
+}
+
+.footer h4{
+  font-size: 1rem;
+  line-height: 8px;
+  margin: .5rem 0;
+}
+
+.footer h4:first-of-type{
+  margin-top: 1.5rem;
+}
+
 /* Small screens - MOBILE */
 @media only screen { } /* Define mobile styles - Mobile First */
  
@@ -91,7 +125,7 @@ p{
   }
 
   .homeSec{
-    margin: 1rem 3.5rem;
+    padding: 1rem 3.5rem;
   }
   
   .NavBar{

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Outlet } from "react-router-dom";
 import NavBar from '../components/NavBar';
 import { getComics } from '../Data';
+import Footer from '../components/Footer';
 
 function Comics() {
 
@@ -19,6 +20,7 @@ function Comics() {
                 ))}
             </div>
             <Outlet />
+            <Footer />
         </section>
     )
 }

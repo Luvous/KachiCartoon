@@ -3,6 +3,7 @@ import { Icon } from '@iconify/react';
 import NavBar from '../components/NavBar';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import Footer from '../components/Footer';
 
 
 function Portfolio() {
@@ -103,6 +104,7 @@ function Portfolio() {
           ))}
         </Carousel>
       </div>
+      <Footer />
     </div>
   )
 }
