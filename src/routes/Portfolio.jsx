@@ -66,8 +66,9 @@ function Portfolio() {
   };
 
   return (
-    <div>
+    <div >
       <NavBar currentPath="portfolio" />
+      <div style={{minHeight:'100vh'}}>
       <ul className='galleryContainer'>
         {IMAGES.map((i) => (
           <li onClick={() => {
@@ -75,7 +76,7 @@ function Portfolio() {
             setItem(i.id)
           }} key={i.id}>
             {i.tags && <div className='tagsImg'>{i.tags[0].value}</div>}
-            <img src={i.thumbnail} />
+            <img src={i.thumbnail} alt=''/>
           </li>
         ))}
       </ul>
@@ -87,22 +88,23 @@ function Portfolio() {
         <Carousel selectedItem={defaultItem} className='carousel' showStatus={false}
           renderArrowPrev={(onClickHandler, hasPrev, label) =>
             hasPrev && (
-              <Icon onClick={onClickHandler} title={label} icon="bxs:left-arrow" color="#ede9e0" width="35" style={{ ...arrowStyles, left:15 }} />
+              <Icon onClick={onClickHandler} title={label} icon="bxs:left-arrow" width="35" style={{ ...arrowStyles, left:15, color:'#ede9e0' }} />
             )
           }
           renderArrowNext={(onClickHandler, hasNext, label) =>
             hasNext && (
-              <Icon onClick={onClickHandler} title={label} icon="bxs:right-arrow" color="#ede9e0" width="35" style={{ ...arrowStyles, right: 15 }} />
+              <Icon onClick={onClickHandler} title={label} icon="bxs:right-arrow" width="35" style={{ ...arrowStyles, right: 15, color:'#ede9e0' }} />
             )
           }
         >
           {IMAGES.map((i) => (
             <div key={i.id}>
-              <img src={i.src} />
+              <img src={i.src} alt='' />
               <p>{i.caption}</p>
             </div>
           ))}
         </Carousel>
+      </div>
       </div>
       <Footer />
     </div>

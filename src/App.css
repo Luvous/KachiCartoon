@@ -272,7 +272,7 @@ p{
 
     width: -moz-available;          /* WebKit-based browsers will ignore this. */
     width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-    width: fill-available;
+    width: stretch;
   }
 
   .carouselCross{
@@ -295,7 +295,7 @@ p{
 
   .carousel .thumbs-wrapper img{
     object-fit: cover;
-    height: fill;
+    height: stretch;
   }
 
   /* Comics Section */

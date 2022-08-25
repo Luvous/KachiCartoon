@@ -8,7 +8,7 @@ import Footer from '../../components/Footer';
 
 function IndividualComic() {
     let { comicId } = useParams();
-    let parsedComic = getComics().find((i) => i.id == comicId);
+    let parsedComic = getComics().find((i) => i.id === comicId);
 
     const handleScroll = () => {
         let scrollPercent = window.scrollY / (document.body.offsetHeight - window.innerHeight);
@@ -46,7 +46,7 @@ function IndividualComic() {
             }}>Paginas: {parsedComic.pages.length}</p>
             <div className='pages-container'>
                 {parsedComic.pages.map((page) => (
-                    <img className='comic-singlepage' src={page} />
+                    <img className='comic-singlepage' src={page} alt=''/>
                 ))}
             </div>
             <br />
