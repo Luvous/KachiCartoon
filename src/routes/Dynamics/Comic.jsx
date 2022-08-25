@@ -1,14 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from '../../components/NavBar';
 import { useParams } from 'react-router-dom';
-import { getComics } from '../../Data';
 import { MantineProvider } from '@mantine/core';
 import { NavigationProgress, setNavigationProgress } from '@mantine/nprogress';
 import Footer from '../../components/Footer';
+import axios from 'axios';
 
 function IndividualComic() {
     let { comicId } = useParams();
-    let parsedComic = getComics().find((i) => i.id === comicId);
 
     const handleScroll = () => {
         let scrollPercent = window.scrollY / (document.body.offsetHeight - window.innerHeight);
@@ -25,6 +24,17 @@ function IndividualComic() {
         };
     }, []);
 
+    const [indComic, getComic] = useState()
+
+    useEffect(()=>{
+        axios.get('http://localhost:1337/api/comics/'+comicId+'?populate=*')
+        .then((response)=>{
+            getComic(response.data)
+        })
+    },[])
+    
+    console.log(indComic)
+    if (!indComic) return null
 
     return (
         <div>
@@ -38,15 +48,15 @@ function IndividualComic() {
                 fontWeight: 700,
                 marginTop: '2.5rem',
                 marginBottom: '.8rem'
-            }}>{parsedComic.title}</h4>
+            }}>{indComic.data.attributes.title}</h4>
             <p style={{
                 fontSize: '1.5rem',
                 textAlign: 'center',
                 margin: '2rem'
-            }}>Paginas: {parsedComic.pages.length}</p>
+            }}>Paginas: {indComic.data.attributes.pages.data.length}</p>
             <div className='pages-container'>
-                {parsedComic.pages.map((page) => (
-                    <img className='comic-singlepage' src={page} alt=''/>
+                {indComic.data.attributes.pages.data.map((page) => (
+                    <img className='comic-singlepage' src={'https://res.cloudinary.com/tomhugin0000/image/upload/q_50/v1661457891/'+page.attributes.hash} key={page.id} alt=''/>
                 ))}
             </div>
             <br />

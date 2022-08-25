@@ -12,7 +12,8 @@ function Comics() {
     const [comics, getComics] = useState()
 
     useEffect(()=>{
-        axios.get('http://localhost:1337/api/comics/').then((response)=>{
+        axios.get('http://localhost:1337/api/comics?populate=*')
+        .then((response)=>{
             getComics(response.data)
         })
     },[])
@@ -25,7 +26,7 @@ function Comics() {
             <div className='comics-container'>
                 {comics.data.map((i) => (
                     <Link to={`/comics/${i.id}`} className='covers-items' key={i.id}>
-                        <img src={i.src} alt='' />
+                        <img src={'https://res.cloudinary.com/tomhugin0000/image/upload/w_600/q_auto/v1661457196/' + i.attributes.cover.data.attributes.hash} alt='' />
                         <p>{i.attributes.title}</p>
                     </Link>
                 ))}

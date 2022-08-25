@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
+import Footer from '../components/Footer';
 import { TextInput, MantineProvider, Textarea, Button } from '@mantine/core';
 import { Icon } from '@iconify/react';
 import FormTwist_infend from '../resources/svgs/FormTwist_infend.svg';
@@ -9,7 +10,7 @@ function Contact() {
   return (
     <section>
       <NavBar currentPath="contact" />
-      <div className='contact-container'>
+      <div style={{minHeight:'80vh'}} className='contact-container'>
         <div className='contact-form'>
           <div className='row'>
             <MantineProvider
@@ -118,6 +119,7 @@ function Contact() {
           </div>
         </div>
       </div>
+      <Footer />
     </section>
   )
 }
