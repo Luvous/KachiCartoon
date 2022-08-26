@@ -1,23 +1,30 @@
-:root{
+:root {
   --main-black: #343134;
   --main-white: #EDE9E0;
 }
 
-a { color: inherit; text-decoration: none;} 
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-i {font-style: normal;}
+i {
+  font-style: normal;
+}
 
-html{
+html {
   background: var(--main-black);
   color: var(--main-white);
   scroll-behavior: smooth;
+  overflow-x: hidden;
+
 }
 
-p{
+p {
   font-weight: 500;
 }
 
-.pages-container{
+.pages-container {
   display: flex;
   flex-direction: column;
   margin: 1rem;
@@ -25,27 +32,27 @@ p{
   align-items: center;
 }
 
-.comic-singlepage{
+.comic-singlepage {
   width: 100%;
   flex: 1;
 }
 
-.mantine-u4eu9e{
+.mantine-u4eu9e {
   background-color: var(--main-white);
 }
 
 .mantine-is8y6n {
-  opacity: 1!important;
-  background-color: var(--main-white)!important;
+  opacity: 1 !important;
+  background-color: var(--main-white) !important;
 }
 
-.mantine-i7tkg5{
-  opacity: 1!important;
-  background-color: var(--main-white)!important;
+.mantine-i7tkg5 {
+  opacity: 1 !important;
+  background-color: var(--main-white) !important;
 }
 
-.mantine-xluadz{
-  background-color: var(--main-white)!important;
+.mantine-xluadz {
+  background-color: var(--main-white) !important;
 }
 
 .carousel .thumbs-wrapper ul {
@@ -62,73 +69,122 @@ p{
   cursor: pointer;
 }
 
-.carousel .thumbs-wrapper img{
+.carousel .thumbs-wrapper img {
   border-radius: 10px;
 }
 
-.footer p{
+.footer p {
   font-size: 1rem;
   font-weight: 400;
   margin: .5rem 0;
 }
 
-.footer h4{
+.footer h4 {
   font-size: 1rem;
   line-height: 8px;
   margin: .5rem 0;
 }
 
-.footer h4:first-of-type{
+.footer h4:first-of-type {
   margin-top: 1.5rem;
 }
 
+
+.ig-grid-first {
+  margin-bottom: 2rem;
+  left: -10rem;
+  position: relative;
+  display: flex;
+  height: 15rem;
+  width: 140rem;
+  background: #000;
+  align-items: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.ig-grid-first img {
+  margin: 1rem;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.portfolio-grid-second {
+  left: 0;
+  position: relative;
+  display: flex;
+  height: 15rem;
+  width: 140rem;
+  background: #000;
+  align-items: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.portfolio-grid-second img {
+  margin: 1rem;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
 /* Small screens - MOBILE */
-@media only screen { } /* Define mobile styles - Mobile First */
- 
-@media only screen and (max-width: 40em) { } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
- 
+@media only screen {}
+
+/* Define mobile styles - Mobile First */
+
+@media only screen and (max-width: 40em) {}
+
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
 /* Medium screens - TABLET */
-@media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */
- 
-@media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
- 
+@media only screen and (min-width: 40.063em) {}
+
+/* min-width 641px, medium screens */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {}
+
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
 /* Large screens - DESKTOP */
 @media only screen and (min-width: 64.063em) {
 
-  h1{
+  h1 {
     font-size: 6rem;
     margin: 0;
     font-weight: 900;
     line-height: 5rem;
   }
-  
-  h1:nth-of-type(2n){
+
+  h1 .secondH1 {
     margin-left: 5.5rem;
   }
 
-  
-  h2{
+
+  h2 {
     font-size: 3.2rem;
   }
 
-  h3{
+  h3 {
     font-size: 1.2rem;
     font-weight: 700;
   }
 
-  p{
+  p {
     font-size: 1.5rem;
   }
 
-  .mainTitle{
+  .mainTitle {
     margin-bottom: 3rem;
+    margin: 1rem 3.5rem;
   }
 
-  .homeSec{
-    padding: 1rem 3.5rem;
-  }
-  
-  .NavBar{
+  .NavBar {
     border-radius: 20px;
     height: 50px;
     width: 60%;
@@ -137,9 +193,10 @@ p{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin: 1rem 3.5rem;
   }
 
-  .navtip{
+  .navtip {
     position: absolute;
     z-index: -1;
     margin-left: -15rem;
@@ -148,7 +205,7 @@ p{
 
   }
 
-  .twist{
+  .twist {
     position: absolute;
     width: 5.2rem;
     margin-top: -2.2rem;
@@ -156,7 +213,7 @@ p{
     opacity: 25%;
   }
 
-  .twistDefault{
+  .twistDefault {
     position: absolute;
     width: 5.5rem;
     margin-top: -2rem;
@@ -165,7 +222,7 @@ p{
   }
 
 
-  .defaultNav{
+  .defaultNav {
     background: var(--main-white);
     color: var(--main-black);
     height: 4rem;
@@ -181,53 +238,54 @@ p{
     filter: drop-shadow(0px 4px 13px rgba(34, 34, 34, 0.65));
   }
 
-  .defaultNav h1{
+  .defaultNav h1 {
     margin-right: auto;
     font-size: 4rem;
   }
 
-  .defaultNav h3{
+  .defaultNav h3 {
     margin: 1rem 2rem;
   }
 
-  .navitem{
+  .navitem {
     opacity: 100%;
     transition: all .15s ease-out;
     cursor: pointer;
   }
 
-  .cont h3{
+  .cont h3 {
     margin-right: 0;
   }
-  
-  .navitem:hover{
-   opacity: 40%;
-   transition: all .1s;
+
+  .navitem:hover {
+    opacity: 40%;
+    transition: all .1s;
   }
 
-  .currentLink{
+  .currentLink {
     cursor: default;
     opacity: 25%;
   }
-  
-  #about{
+
+  #about {
     margin-top: 5rem;
     height: 90vh;
   }
 
-  .about-container{
+  .about-container {
     margin-left: auto;
     margin-top: 8rem;
     width: 30%;
     text-align: right;
   }
 
-  #recentwork{
+  #recentwork {
+    overflow: hidden;
     height: 100vh;
   }
 
   /* Portfolio Styles */
-  .galleryContainer{
+  .galleryContainer {
     margin: 1rem 3.5rem;
     padding: 0;
     display: flex;
@@ -237,7 +295,7 @@ p{
     border-radius: 10px;
   }
 
-  .galleryContainer li{
+  .galleryContainer li {
     width: auto;
     height: 13rem;
     flex-grow: 1;
@@ -246,7 +304,7 @@ p{
     position: relative;
   }
 
-  .galleryContainer li img{
+  .galleryContainer li img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -254,7 +312,7 @@ p{
     cursor: pointer;
   }
 
-  .tagsImg{
+  .tagsImg {
     font-weight: 300;
     position: absolute;
     bottom: 0;
@@ -264,43 +322,45 @@ p{
     background: rgba(52, 49, 52, 0.70);
   }
 
-  .carouselContainer{
+  .carouselContainer {
     top: 5rem;
     position: absolute;
     margin: 0 3.5rem;
     background: rgba(52, 49, 52, 0.90);
 
-    width: -moz-available;          /* WebKit-based browsers will ignore this. */
-    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: -moz-available;
+    /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;
+    /* Mozilla-based browsers will ignore this. */
     width: stretch;
   }
 
-  .carouselCross{
+  .carouselCross {
     z-index: 50;
     position: absolute;
     right: .5rem;
     cursor: pointer;
   }
 
-  .carousel .slide img{
+  .carousel .slide img {
     object-fit: contain;
     max-width: 70%;
     max-height: 60vh;
   }
 
-  .carousel .thumbs-wrapper ul{
+  .carousel .thumbs-wrapper ul {
     display: flex;
     justify-content: center;
   }
 
-  .carousel .thumbs-wrapper img{
+  .carousel .thumbs-wrapper img {
     object-fit: cover;
     height: stretch;
   }
 
   /* Comics Section */
 
-  .comics-container{
+  .comics-container {
     margin: 1rem 3.5rem;
     padding: 0;
     display: flex;
@@ -308,8 +368,8 @@ p{
     border-radius: 10px;
     justify-content: space-between;
   }
-  
-  .covers-items{
+
+  .covers-items {
     width: 20%;
     height: auto;
     margin: 1.5rem 5px 5rem;
@@ -319,7 +379,7 @@ p{
     color: var(--main-white);
   }
 
-  .covers-items img{
+  .covers-items img {
     border-radius: 5px;
     width: 100%;
     height: 100%;
@@ -327,14 +387,14 @@ p{
     vertical-align: bottom;
   }
 
-  .covers-items:hover{
+  .covers-items:hover {
     opacity: 70%;
   }
-  
+
 
   /* NotFound */
 
-  .not-found-container{
+  .not-found-container {
     margin: 2.5rem 3.5rem;
     border-radius: 20px;
     background: var(--main-white);
@@ -342,31 +402,31 @@ p{
     padding: 2rem;
   }
 
-  .not-found-container h1{
+  .not-found-container h1 {
     font-size: 3.5rem;
   }
 
-  .not-found-container h2{
+  .not-found-container h2 {
     font-size: 2rem;
     font-weight: 600;
     width: 55%;
   }
-  
+
   /* Contact Section */
 
-  .contact-container{
+  .contact-container {
     margin: 3rem 3.5rem;
     display: flex;
     justify-content: space-between;
   }
 
-  .contact-form{
+  .contact-form {
     display: flex;
     width: 35%;
     flex-direction: column;
   }
-  
-  .contact-info{
+
+  .contact-info {
     width: 25%;
     display: flex;
     justify-content: flex-start;
@@ -374,19 +434,19 @@ p{
     align-items: flex-end;
   }
 
-  .contact-info h3{
+  .contact-info h3 {
     font-weight: 700;
     font-size: 1.8rem;
     margin-top: 0;
     width: 100%;
   }
 
-  .contact-info h4{
+  .contact-info h4 {
     font-weight: 500;
     font-size: 1.35rem;
   }
 
-  .info-socials{
+  .info-socials {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -395,39 +455,49 @@ p{
     justify-content: space-between;
   }
 
-  .row{
+  .row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 2rem;
   }
 
-  .txrerw .mantine-1m3pqry{
+  .txrerw .mantine-1m3pqry {
     width: 100%;
   }
 
   /* Comics */
 
-  .pages-container{
+  .pages-container {
     display: flex;
     flex-direction: column;
     margin: 1rem 2.5rem;
     justify-content: center;
   }
 
-  .comic-singlepage{
+  .comic-singlepage {
     width: 95%;
     flex: 1;
   }
 
-} /* min-width 1025px, large screens */
- 
-@media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
- 
+}
+
+/* min-width 1025px, large screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {}
+
+/* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
+
 /* XLarge screens */
-@media only screen and (min-width: 90.063em) { } /* min-width 1441px, xlarge screens */
- 
-@media only screen and (min-width: 90.063em) and (max-width: 120em) { } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
- 
+@media only screen and (min-width: 90.063em) {}
+
+/* min-width 1441px, xlarge screens */
+
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {}
+
+/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
 /* XXLarge screens */
-@media only screen and (min-width: 120.063em) { } /* min-width 1921px, xlarge screens */
+@media only screen and (min-width: 120.063em) {}
+
+/* min-width 1921px, xlarge screens */
