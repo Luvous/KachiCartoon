@@ -24,7 +24,7 @@ function Home() {
     const scaleLines = useTransform(scrollYProgress, [0, 1], [20, -300]);
 
     const [igFeed, getFeed] = useState();
-
+// !!REMOVE ACCESS TOKEN BEFORE COMMIT
     useEffect(() => {
         axios.get('https://graph.instagram.com/me/media?limit=12&fields=id,media_url,permalink&access_token=')
             .then((response) => {
