@@ -8,7 +8,7 @@ import Twist04 from '../resources/svgs/Twist04.svg';
 function NavBar(props) {
     return (
         <div className={`${props.currentPath === "home" ? "NavBar" : "defaultNav"}`}>
-            {props.currentPath !== "home" && <h1>MV</h1>}
+            {props.currentPath !== "home" && <h1>KC</h1>}
             {props.currentPath === "home" && <img className='navtip' src={NavTip} alt='svg' />}
             {props.currentPath === "home" ? <i> <h3 className='currentLink'>Inicio</h3> <img className='twist' src={Twist01} alt='twist01'/> </i> : <a className='navitem' href='/'><h3>Inicio</h3></a>}
             {props.currentPath === "comics" ? <i> <h3 className='currentLink'>Cómics</h3> <img className='twistDefault' src={Twist02} alt='twist01'/> </i> : <a className='navitem' href='/comics'><h3>Cómics</h3></a>}

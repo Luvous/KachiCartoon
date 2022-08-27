@@ -4,13 +4,13 @@ import Footer from '../components/Footer';
 import { TextInput, MantineProvider, Textarea, Button } from '@mantine/core';
 import { Icon } from '@iconify/react';
 import FormTwist_infend from '../resources/svgs/FormTwist_infend.svg';
-
+import PenTlick01 from '../resources/svgs/PenTlick01.svg';
 
 function Contact() {
   return (
     <section>
       <NavBar currentPath="contact" />
-      <div style={{minHeight:'80vh'}} className='contact-container'>
+      <div style={{ minHeight: '80vh' }} className='contact-container'>
         <div className='contact-form'>
           <div className='row'>
             <MantineProvider
@@ -108,7 +108,14 @@ function Contact() {
           </div>
           <br />
           <div className='info-form'>
-            <h3>Contacto</h3>
+            <h3>
+              <img style={{
+                position: 'absolute',
+                translate: '-2rem -1rem',
+                width: '2.2rem',
+                opacity: '90%',
+                transform: 'scaleX(-1)',
+              }} src={PenTlick01} alt='svg' />Contacto</h3>
             <h4>Ciudad de Buenos Aires - Argentina</h4>
             <h4>Usa el formulario para contarme sobre tu proyecto, idea u otros intereses. Serás respondido lo más pronto posible.</h4>
             <img style={{

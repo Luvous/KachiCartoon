@@ -26,7 +26,7 @@ function Footer() {
                     <h4>Argentina</h4>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', marginLeft:'auto'}}>
-                    <h1 style={{fontSize:'3rem', lineHeight:'45px', marginTop:'19px'}}>MATIAS<br/>VARELA</h1>
+                    <h1 style={{textAlign:'right',fontSize:'3rem', lineHeight:'30px', marginTop:'19px'}}>KACHI<br/><span style={{fontSize:'1.85rem'}}>CARTOON</span></h1>
                 </div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'row', justifyContent:'space-between', lineHeight:'25px'}}>
