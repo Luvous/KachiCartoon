@@ -5,6 +5,7 @@ import { MantineProvider } from '@mantine/core';
 import { NavigationProgress, setNavigationProgress } from '@mantine/nprogress';
 import Footer from '../../components/Footer';
 import axios from 'axios';
+import DotWaves from '../Misc/DotWaves';
 
 function IndividualComic() {
     let { comicId } = useParams();
@@ -12,7 +13,7 @@ function IndividualComic() {
     const handleScroll = () => {
         let scrollPercent = window.scrollY / (document.body.offsetHeight - window.innerHeight);
         let position = Math.round(scrollPercent * 99);
-      
+
         setNavigationProgress(position)
     };
 
@@ -26,13 +27,13 @@ function IndividualComic() {
 
     const [indComic, getComic] = useState()
 
-    useEffect(()=>{
-        axios.get('http://localhost:1337/api/comics/'+comicId+'?populate=*')
-        .then((response)=>{
-            getComic(response.data)
-        })
-    },[])
-    
+    useEffect(() => {
+        axios.get('http://localhost:1337/api/comics/' + comicId + '?populate=*')
+            .then((response) => {
+                getComic(response.data)
+            })
+    }, [])
+
     console.log(indComic)
     if (!indComic) return null
 
@@ -54,16 +55,28 @@ function IndividualComic() {
                 textAlign: 'center',
                 margin: '2rem'
             }}>Paginas: {indComic.data.attributes.pages.data.length}</p>
-            <div className='pages-container'>
-                {indComic.data.attributes.pages.data.map((page) => (
-                    <img className='comic-singlepage' src={'https://res.cloudinary.com/tomhugin0000/image/upload/q_50/v1661457891/'+page.attributes.hash} key={page.id} alt=''/>
-                ))}
-            </div>
+            {!indComic ?
+                <div style={{
+                    height: '60vh',
+                    display: 'flex',
+                    width: '100%',
+                    justifyContent: 'center',
+                    alignContent: 'space-between',
+                    paddingTop: '10rem'
+                }}>
+                    <DotWaves />
+                </div> :
+                <div className='pages-container'>
+                    {indComic.data.attributes.pages.data.map((page) => (
+                        <img loading="lazy" className='comic-singlepage' src={'https://res.cloudinary.com/tomhugin0000/image/upload/w_700/q_50/v1661457891/' + page.attributes.hash} key={page.id} alt='' />
+                    ))}
+                </div>
+            }
             <br />
             <br />
             <br />
             <Footer />
-        </div> 
+        </div>
     )
 }
 

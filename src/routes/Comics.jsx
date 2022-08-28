@@ -36,7 +36,7 @@ function Comics() {
                     </div> :
                     comics.data.map((i) => (
                         <Link to={`/comics/${i.id}`} className='covers-items' key={i.id}>
-                            <img src={'https://res.cloudinary.com/tomhugin0000/image/upload/w_600/q_auto/v1661457196/' + i.attributes.cover.data.attributes.hash} alt='' />
+                            <img loading="lazy" src={'https://res.cloudinary.com/tomhugin0000/image/upload/w_600/q_auto/v1661457196/' + i.attributes.cover.data.attributes.hash} alt='' />
                             <p>{i.attributes.title}</p>
                         </Link>
                     ))
