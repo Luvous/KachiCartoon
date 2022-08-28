@@ -3,8 +3,7 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import { motion, useScroll, useTransform } from "framer-motion";
 import axios from 'axios';
-import { Icon } from '@iconify/react';
-
+import { Icon } from '@iconify/react'
 import Cloud01 from '../resources/svgs/Cloud01.svg';
 import Cloud02 from '../resources/svgs/Cloud02.svg';
 import Cloud03 from '../resources/svgs/Cloud03.svg';
@@ -24,7 +23,8 @@ function Home() {
     const scaleLines = useTransform(scrollYProgress, [0, 1], [20, -300]);
 
     const [igFeed, getFeed] = useState();
-// !!REMOVE ACCESS TOKEN BEFORE COMMIT
+
+    // !!REMOVE ACCESS TOKEN BEFORE COMMIT
     useEffect(() => {
         axios.get('https://graph.instagram.com/me/media?limit=12&fields=id,media_url,permalink&access_token=')
             .then((response) => {
@@ -146,8 +146,8 @@ function Home() {
                             opacity: '90%'
                         }} src={PenTlick02} alt='svg' />Recientes...</h2>
                     {!igFeed ?
-                        <div className='ig-grid-first' style={{ display: 'flex', left: 'auto', width:'100%',justifyContent: 'center' }}>
-                            <DotWaves/>
+                        <div className='ig-grid-first' style={{ display: 'flex', left: 'auto', width: '100%', justifyContent: 'center' }}>
+                            <DotWaves />
                         </div>
                         :
                         <motion.div style={{ translateX: scalePos }} className='ig-grid-first'>

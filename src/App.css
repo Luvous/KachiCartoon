@@ -150,6 +150,33 @@ p {
   justify-content: space-around;
 }
 
+
+.NavBar {
+  border-radius: 0;
+  height: 100vh;
+  width: 100%;
+  background: var(--main-white);
+  color: var(--main-black);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0;
+  flex-direction: column;
+  top: 0;
+  position: fixed;
+  z-index: 50;
+  font-size: 2rem;
+}
+
+.navtip {
+  position: absolute;
+  z-index: -1;
+  margin-left: -15rem;
+  margin-top: -6px;
+  height: 64px;
+  display: none;
+}
+
 /* Small screens - MOBILE */
 @media only screen {}
 
@@ -211,6 +238,10 @@ p {
     align-items: center;
     justify-content: space-evenly;
     margin: 2.5rem 3.5rem 4rem;
+    flex-direction: row;
+    top: auto;
+    z-index: 0;
+    position: unset;
   }
 
   .navtip {
@@ -219,7 +250,7 @@ p {
     margin-left: -15rem;
     margin-top: -6px;
     height: 64px;
-
+    display: block;
   }
 
   .twist {
