@@ -168,6 +168,37 @@ p {
   font-size: 2rem;
 }
 
+.defaultNav {
+  border-radius: 0;
+  height: 100vh;
+  width: 100%;
+  background: var(--main-white);
+  color: var(--main-black);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0;
+  flex-direction: column;
+  top: 0;
+  position: fixed;
+  z-index: 50;
+  font-size: 2rem;
+}
+
+.navMobile h1{
+  font-size: 3rem;
+  color: #343134;
+}
+
+.close-nav {
+  display: none;
+}
+
+.open-nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .navtip {
   position: absolute;
   z-index: -1;
@@ -175,6 +206,40 @@ p {
   margin-top: -6px;
   height: 64px;
   display: none;
+}
+
+.twist {
+  position: absolute;
+  width: 8rem;
+  margin-top: -4.2rem;
+  margin-left: -1.2rem;
+  opacity: 35%;
+}
+
+.twistDefault {
+  position: absolute;
+  width: 10rem;
+  margin-top: -4.2rem;
+  margin-left: -1.2rem;
+  opacity: 35%;
+}
+
+.currentLink {
+  cursor: default;
+  opacity: 25%;
+}
+
+.navMobile {
+  display: flex;
+  background: var(--main-white);
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  top: 0;
+  z-index: 5;
 }
 
 /* Small screens - MOBILE */
@@ -287,6 +352,7 @@ p {
   }
 
   .defaultNav h1 {
+    display: block;
     margin-right: auto;
     font-size: 4rem;
   }
@@ -310,10 +376,7 @@ p {
     transition: all .1s;
   }
 
-  .currentLink {
-    cursor: default;
-    opacity: 25%;
-  }
+
 
   #about {
     margin-top: 5rem;
