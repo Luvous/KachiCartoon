@@ -186,8 +186,13 @@ p {
 }
 
 .navMobile h1{
+  display: block;
   font-size: 3rem;
   color: #343134;
+}
+
+.defaultNav h1{
+  display: none;
 }
 
 .close-nav {
@@ -334,7 +339,6 @@ p {
     opacity: 25%;
   }
 
-
   .defaultNav {
     background: var(--main-white);
     color: var(--main-black);
@@ -348,11 +352,11 @@ p {
     top: 0;
     z-index: 50;
     overflow: hidden;
-    filter: drop-shadow(0px 4px 13px rgba(34, 34, 34, 0.65));
+    filter: none;
   }
 
   .defaultNav h1 {
-    display: block;
+    display: block !important;
     margin-right: auto;
     font-size: 4rem;
   }
@@ -376,7 +380,25 @@ p {
     transition: all .1s;
   }
 
+  .navMobile{
+    width: unset;
+    height: unset;
+    position: unset;
+    top: 0;
+    z-index: 5;
+  }
 
+  .homeNav{
+    display: unset;
+  }
+
+  .navMobile h1{
+    display: none;
+  }
+
+  .navMobile button{
+    display: none;
+  }
 
   #about {
     margin-top: 5rem;

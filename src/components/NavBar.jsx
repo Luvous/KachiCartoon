@@ -11,9 +11,9 @@ function NavBar(props) {
     const [opened, setOpened] = useState(false);
 
     return (
-        <div className='navMobile'>
+        <div className={`navMobile ${props.currentPath === "home" ? "homeNav" : "normalNav"}`}>
             <Burger
-            style={{marginRight:'5%', zIndex:70}}
+                style={{ marginRight: '5%', zIndex: 70 }}
                 color='#343134'
                 opened={opened}
                 size={40}
@@ -21,6 +21,7 @@ function NavBar(props) {
             />
             {props.currentPath !== "home" && <h1>KC</h1>}
             <div className={`${props.currentPath === "home" ? "NavBar" : "defaultNav"} ${opened ? "open-nav" : "close-nav"}`} >
+                {props.currentPath !== "home" && <h1>KC</h1>}
                 {props.currentPath === "home" && <img className='navtip' src={NavTip} alt='svg' />}
                 {props.currentPath === "home"
                     ?
