@@ -200,6 +200,7 @@ p {
 }
 
 .open-nav {
+  padding-top: 4rem;
   display: flex;
   justify-content: flex-start;
 }
@@ -245,6 +246,79 @@ p {
   flex-direction: row-reverse;
   top: 0;
   z-index: 5;
+}
+
+.galleryContainer {
+  margin: 6rem 1rem 3.5rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  overflow: visible;
+  border-radius: 10px;
+}
+
+.galleryContainer li {
+  width: auto;
+  height: 10rem;
+  flex-grow: 1;
+  padding: 1.5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.galleryContainer li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+  cursor: pointer;
+}
+
+.tagsImg {
+  font-weight: 300;
+  position: absolute;
+  bottom: 0;
+  margin: .5rem;
+  padding: 5px;
+  border-radius: 5px;
+  background: rgba(52, 49, 52, 0.70);
+}
+
+.carouselContainer {
+  top: 5rem;
+  position: absolute;
+  margin: 0 3.5rem;
+  background: rgba(52, 49, 52, 0.90);
+
+  width: -moz-available;
+  /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available;
+  /* Mozilla-based browsers will ignore this. */
+  width: stretch;
+}
+
+.carouselCross {
+  z-index: 50;
+  position: absolute;
+  right: .5rem;
+  cursor: pointer;
+}
+
+.carousel .slide img {
+  object-fit: contain;
+  max-width: 70%;
+  max-height: 60vh;
+}
+
+.carousel .thumbs-wrapper ul {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel .thumbs-wrapper img {
+  object-fit: cover;
+  height: stretch;
 }
 
 /* Small screens - MOBILE */

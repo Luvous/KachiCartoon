@@ -11,11 +11,15 @@ function Comics() {
     // const comicsData = getComics();
 
     const [comics, getComics] = useState()
+    const [errorMessage, setError] = useState('')
 
     useEffect(() => {
         axios.get('http://localhost:1337/api/comics?populate=*')
             .then((response) => {
                 getComics(response.data)
+            })
+            .catch((err)=>{
+                setError(err.message)
             })
     }, [])
 
@@ -33,6 +37,7 @@ function Comics() {
                         paddingTop: '10rem'
                     }}>
                         <DotWaves />
+                        <i>{errorMessage}</i>
                     </div> :
                     comics.data.map((i) => (
                         <Link to={`/comics/${i.id}`} className='covers-items' key={i.id}>
